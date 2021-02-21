@@ -1,0 +1,23 @@
+
+
+========================================================================
+Replicaset
+
+Q. How to scale replicas
+1. modify value of "replicas" in yaml and run
+> kubectl replace -f replicaset-definition.yml
+
+2. use Scale cmd without modifying yaml file
+> kubectl scale --replicas=6 -f replicaset-definition.yml
+
+3. use Scale on the fly without yaml file
+> kubectl scale --replicas=6 replicaset myapp-replicaset
+                               (type)   (replicaset name)
+
+Practice Test Learnings
+You can edit on the fly without having yaml file
+> kubectl edit replicaset myapp-replicaset
+
+For pods to refresh, you can remove all pods after editing replicaset
+> kubectl delete pod --all
+========================================================================

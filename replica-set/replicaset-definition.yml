@@ -17,7 +17,6 @@ spec:
         - name: nginx-container
           image: nginx
   replicas: 3
-  selector:
+  selector: # selector section is required in ReplicaSet (not required for ReplicationController)
     matchLabels:
       app: myapp # same : needs to match labels of the pod
-
