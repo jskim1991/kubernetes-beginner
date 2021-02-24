@@ -21,3 +21,14 @@ You can edit on the fly without having yaml file
 For pods to refresh, you can remove all pods after editing replicaset
 > kubectl delete pod --all
 ========================================================================
+Deployment
+
+========================================================================
+Namespace
+
+Access pods under other namespace
+> kubectl get pods --namespace=kube-system
+> kubectl create -f 000.yaml --namespace=dev
+> kubectl create namespace dev
+
+========================================================================
